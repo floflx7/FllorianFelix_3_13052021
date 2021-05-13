@@ -1,0 +1,190 @@
+@media only screen and (max-width: 600px) {
+    body {
+      font-family: "Roboto", sans-serif;
+      padding: 0rem 1rem 0rem 1rem;
+      margin-bottom: -5px;
+    }
+  
+    
+  
+    @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+  
+    h1 {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  
+    h2 {
+      font-size: 17px;
+    }
+  
+    p {
+      font-size: 15px;
+    }
+  
+    .logo_head {
+      width: 150px;
+      display: relative;
+      text-align: center;
+    }
+  
+    .bannière_logo_flèche {
+      display: inline;
+      text-align: center;
+    }
+  
+    .bannière_logo {
+      width: 100%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      z-index: auto;
+    }
+  
+    header img{
+      width: 100%;
+    }
+  
+    .bouton_explorer {
+      color: white;
+      background: linear-gradient(#ff79da, #9356dc);
+      padding: 15px;
+      border-radius: 30px;
+      border: none;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.185);
+      margin-bottom: 50px;
+    }
+  
+    
+  
+    .logo_chiffre {
+      color: white;
+      padding: 5px 10px 5px 10px;
+      background-color: #9356dc;
+      border-radius: 20px;
+      font-weight: normal;
+      margin-top: -5px;
+    }
+  
+    .fonctionnement {
+      margin-bottom: 80px;
+    }
+  
+  
+    .box_menu{
+      padding: 10px;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.192);
+      border-radius: 20px;
+      margin-bottom: 20px;
+      margin-left: 10px;
+    }
+  
+    .box_fonctionnement ul {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      margin-left: -80px;
+    }
+  
+    .box_fonctionnement ul li {
+      margin-left: 20px;
+      font-weight: bold;
+    }
+  
+    .box_fonctionnement ul li i {
+      color: #686565;
+    }
+  
+    .logo_composez_2 {
+      margin-left: -17px;
+      height: 20px;
+      width: 30px;
+    }
+  
+    .logo_store li i {
+      color: #9356dc;
+    }
+  
+   .texte_box_restaurants {
+       margin-left: 10px;
+       margin-top: -5px;
+   }
+   
+  
+    .restaurant {
+      
+    }
+  
+    .logo_hearth  {
+       float: right;
+       padding-right: 20px;
+       margin-top: -40px;
+       font-size: 25px;
+       color: white;
+       text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      }
+  
+      .logo_hearth :hover {
+          color: #9356dc;
+          background: linear-gradient( #9356dc, #ff79da);
+          text-shadow: none;
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+          
+          
+        }
+  
+  .box_menu {
+      
+    }
+  
+  
+    footer {
+      background-color: #353535;
+      padding: 1rem;
+      color: white;
+      margin-left: -1.5rem;
+      margin-right: -1.5rem;
+    }
+  
+    .logo_footer {
+      width: 100px;
+    }
+  
+    .footer_couverts ul li {
+      display: inline-block;
+    }
+  
+    .footer_couverts ul li i {
+      margin-left: -30px;
+    }
+  
+    .footer_handshake {
+      margin-top: -30px;
+    }
+  
+    .footer_handshake ul li {
+      display: inline-block;
+    }
+  
+    .footer_handshake ul li i {
+      margin-left: -30px;
+    }
+  
+    .footer_contact ul {
+      list-style: none;
+      margin-top: -15px;
+      margin-left: -30px;
+    }
+  
+    .footer_contact ul a{
+      color: white;
+      text-decoration: none;
+    }
+  
+    .footer_contact ul a:hover{
+      color: #9356dc;
+      text-decoration: none;
+      
+    }
+  
+  }  
