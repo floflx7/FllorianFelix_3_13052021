@@ -1,3 +1,264 @@
+body {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+h1 {
+  font-size: 25px;
+  font-family: "Shrikhand", cursive;
+  padding-left: 15px;
+  font-weight: lighter;
+  width: 80%;
+}
+
+h2 {
+  font-size: 17px;
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 15px;
+}
+
+.logo_head {
+  width: 150px;
+  text-align: center;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding: 10px;
+}
+
+.flèche a i {
+  display: block;
+  float: left;
+  color: black;
+  position: absolute;
+  margin-top: 10px;
+}
+
+.flèche a i:hover {
+  color: black;
+}
+
+.img_header {
+  width: 100vw;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+  padding: 0;
+  z-index: 0;
+  margin-left: -8px;
+}
+
+header {
+}
+
+.a_la_française {
+  border-radius: 30px 30px 0px 0px;
+  margin-top: -50px;
+  position: relative;
+  z-index: 10;
+  background-color: rgb(255, 255, 255);
+  margin-left: -8px;
+  padding-top: 5px;
+  width: 100vw;
+}
+
+.bouton_explorer {
+  color: white;
+  background: linear-gradient(#ff79da, #9356dc);
+  padding: 15px 40px 15px 40px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.185);
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.logo_chiffre {
+  color: white;
+  padding: 5px 10px 5px 10px;
+  background-color: #9356dc;
+  border-radius: 20px;
+  font-weight: normal;
+  margin-top: -5px;
+}
+
+.fonctionnement {
+  margin-bottom: 80px;
+}
+
+main {
+  padding: 0rem 0.5rem 0rem 0.5rem;
+}
+
+.box_menu {
+  padding: 1px 5px 1px 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.192);
+  border-radius: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prix {
+  float: right;
+  margin-top: -50px;
+  margin-left: -20px;
+  font-weight: bold;
+}
+
+.box_menu h2 {
+  font-weight: bold;
+  text-transform: none;
+}
+
+.box_menu p {
+  width: 80%;
+}
+
+.ligne_box_menu {
+  border-bottom: 2px solid #99e2d0;
+  width: 40px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.box_fonctionnement ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin-left: -80px;
+}
+
+.box_fonctionnement ul li {
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.box_fonctionnement ul li i {
+  color: #686565;
+}
+
+
+
+.logo_hearth {
+  float: right;
+  padding-right: 20px;
+  margin-top: -55px;
+  font-size: 25px;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.logo_hearth :hover {
+  color: #9356dc;
+  background: linear-gradient(#9356dc, #ff79da);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.box_menu {
+}
+
+footer {
+  background-color: #353535;
+  padding: 10px 20px;
+  bottom: 0;
+  width: 100vw;
+  box-sizing: border-box;
+  color: white;
+  margin-left: -8px;
+}
+
+.logo_footer {
+  width: 100px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.footer_couverts ul li {
+  display: inline-block;
+  margin-top: -10px;
+}
+
+.footer_couverts ul li i {
+  margin-left: -30px;
+}
+
+.footer_handshake {
+  margin-top: -30px;
+}
+
+.footer_handshake ul li {
+  display: inline-block;
+}
+
+.footer_handshake ul li i {
+  margin-left: -30px;
+}
+
+.footer_contact ul {
+  list-style: none;
+  margin-top: -15px;
+  margin-left: -30px;
+}
+
+.footer_contact ul a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer_contact ul a:hover {
+  color: #9356dc;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 1280px) {
+  .entrée {
+    display: flex;
+    flex-direction: row;
+  }
+
+  }
+
+
+
+
+@media only screen and (max-width: 1280px) {
+  .img_header {
+    width: 100vw;
+    height: 300px;
+    padding: 0;
+    z-index: 0;
+    margin-left: -8px;
+    object-fit: cover;
+  }
+
+
+}
+
+
+
+
 @media only screen and (max-width: 600px) {
   body {
     font-family: "Roboto", sans-serif;
@@ -52,7 +313,8 @@
 
   .img_header {
     width: 100vw;
-    height: 100%;
+    height: 250px;
+    object-fit: cover;
     padding: 0;
     z-index: 0;
     margin-left: -8px;
