@@ -1,6 +1,6 @@
 body {
   font-family: "Roboto", sans-serif;
-  padding: 0;
+  padding: 0px 10px 0px 10px;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -8,7 +8,7 @@ body {
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 h1 {
-  font-size: 25px;
+  font-size: 20px;
   font-family: "Shrikhand", cursive;
   padding-left: 15px;
   font-weight: lighter;
@@ -27,7 +27,7 @@ p {
 }
 
 .logo_head {
-  width: 150px;
+  width: 200px;
   text-align: center;
   position: relative;
   display: block;
@@ -41,8 +41,10 @@ p {
   display: block;
   float: left;
   color: black;
-  position: absolute;
-  margin-top: 10px;
+  position: relative;
+  margin-top: 15px;
+  font-size: 20px;
+  left: 5%;
 }
 
 .flèche a i:hover {
@@ -56,7 +58,7 @@ p {
   object-position: center;
   padding: 0;
   z-index: 0;
-  margin-left: -8px;
+  margin-left: -18px;
 }
 
 header {
@@ -68,9 +70,10 @@ header {
   position: relative;
   z-index: 10;
   background-color: rgb(255, 255, 255);
-  margin-left: -8px;
+  margin-left: -18px;
   padding-top: 5px;
   width: 100vw;
+  text-align: center;
 }
 
 .bouton_explorer {
@@ -84,6 +87,16 @@ header {
   margin-left: auto;
   margin-right: auto;
   display: block;
+  font-size: 17px;
+  cursor: initial;
+}
+
+main {
+}
+
+.bouton_explorer:hover {
+  background: linear-gradient(#ff91e0, #9460d3);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.445);
 }
 
 .logo_chiffre {
@@ -92,15 +105,24 @@ header {
   background-color: #9356dc;
   border-radius: 20px;
   font-weight: normal;
-  margin-top: -5px;
 }
 
 .fonctionnement {
   margin-bottom: 80px;
 }
 
-main {
-  padding: 0rem 0.5rem 0rem 0.5rem;
+.titre_plats {
+  position: relative;
+  margin-left: 25%;
+  z-index: 30;
+}
+
+.ligne_box_menu {
+  border-bottom: 2px solid #99e2d0;
+  width: 40px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  margin-left: 25%;
 }
 
 .box_menu {
@@ -110,11 +132,42 @@ main {
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
+  width: 50%;
+}
+
+.wrap_entrées {
+  position: relative;
+  animation: 1.5s ease-in 0s reverse both running slidein;
+  z-index: 100;
+}
+
+.wrap_plats {
+  position: relative;
+  animation: 2s ease-in 0s reverse both running slidein;
+  z-index: 100;
+}
+
+.wrap_desserts {
+  position: relative;
+  animation: 2.5s ease-in 0s reverse both running slidein;
+  z-index: 100;
+}
+
+@keyframes slidein {
+  from {
+    transform: translatey(0px);
+    opacity: 1;
+  }
+
+  to {
+    transform: translatey(20px);
+    opacity: 0;
+  }
 }
 
 .prix {
   float: right;
-  margin-top: -50px;
+  margin-top: -30px;
   margin-left: -20px;
   font-weight: bold;
 }
@@ -126,6 +179,7 @@ main {
 
 .box_menu p {
   width: 80%;
+  margin-top: 0;
 }
 
 .ligne_box_menu {
@@ -151,12 +205,10 @@ main {
   color: #686565;
 }
 
-
-
 .logo_hearth {
-  float: right;
+  margin-left: 10%;
   padding-right: 20px;
-  margin-top: -55px;
+  margin-top: -45px;
   font-size: 25px;
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -168,6 +220,25 @@ main {
   text-shadow: none;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  animation: earth 0.2s linear;
+}
+
+.box_restaurants i:hover {
+  color: #9356dc;
+  background: linear-gradient(#9356dc, #ff79da);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: earth 0.2s linear;
+}
+
+@keyframes earth {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .box_menu {
@@ -175,12 +246,13 @@ main {
 
 footer {
   background-color: #353535;
-  padding: 10px 20px;
+  padding: 10px 0px 10px 0px;
   bottom: 0;
   width: 100vw;
   box-sizing: border-box;
   color: white;
-  margin-left: -8px;
+  margin-left: -18px;
+  text-align: center;
 }
 
 .logo_footer {
@@ -191,15 +263,18 @@ footer {
 
 .footer_couverts ul li {
   display: inline-block;
+  font-size: 20px;
   margin-top: -10px;
 }
 
 .footer_couverts ul li i {
   margin-left: -30px;
+  font-size: 20px;
 }
 
 .footer_handshake {
   margin-top: -30px;
+  font-size: 15px;
 }
 
 .footer_handshake ul li {
@@ -226,51 +301,103 @@ footer {
   text-decoration: none;
 }
 
-
-
-
-
-
-
 @media only screen and (min-width: 1280px) {
   .entrée {
     display: flex;
     flex-direction: row;
   }
 
+  .plats {
+    display: flex;
+    flex-direction: row;
   }
-
-
-
+}
 
 @media only screen and (max-width: 1280px) {
+  .logo_head {
+    width: 200px;
+    padding: 20px;
+  }
+
+  .flèche {
+    font-size: 20px;
+    position: relative;
+    top: 15px;
+    left: 5%;
+  }
+
   .img_header {
     width: 100vw;
     height: 300px;
     padding: 0;
     z-index: 0;
-    margin-left: -8px;
+    margin-left: -18px;
     object-fit: cover;
   }
 
+  .logo_hearth {
+    position: relative;
+    font-size: 30px;
+    float: right;
+    left: -10%;
+  }
 
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 17px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .titre_plats {
+    position: relative;
+    margin-left: 9%;
+  }
+
+  .ligne_box_menu {
+    margin-left: 9%;
+    width: 50px;
+  }
+
+  .prix {
+    position: relative;
+    top: -30px;
+    left: -20px;
+    float: right;
+    margin-top: 0px;
+    font-weight: bold;
+  }
+
+  .box_menu {
+    width: 80%;
+    max-width: 1000px;
+    min-width: 600px;
+  }
+
+  .box_menu p {
+    font-size: 15px;
+  }
+
+  .bouton_explorer {
+    font-size: 17px;
+  }
 }
-
-
-
 
 @media only screen and (max-width: 600px) {
   body {
     font-family: "Roboto", sans-serif;
-    padding: 0;
+    padding: 0px 10px 0px 10px;
     margin-top: 0;
     margin-bottom: 0;
   }
 
-  @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
-  h1 {
-    font-size: 25px;
+  .fonctionnement h1 {
+    font-size: 20px;
     font-family: "Shrikhand", cursive;
     padding-left: 15px;
     font-weight: lighter;
@@ -278,14 +405,18 @@ footer {
   }
 
   h2 {
-    font-size: 17px;
+    font-size: 15px;
     font-family: "Roboto", sans-serif;
     font-weight: lighter;
     text-transform: uppercase;
   }
 
+  .ligne_box_menu {
+    margin-left: inherit;
+  }
+
   p {
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .logo_head {
@@ -304,7 +435,8 @@ footer {
     float: left;
     color: black;
     position: absolute;
-    margin-top: 10px;
+    margin-top: 0px;
+    font-size: 15px;
   }
 
   .flèche a i:hover {
@@ -313,11 +445,12 @@ footer {
 
   .img_header {
     width: 100vw;
-    height: 250px;
+    height: 200px;
     object-fit: cover;
     padding: 0;
     z-index: 0;
-    margin-left: -8px;
+    margin-left: -18px;
+    object-position: bottom;
   }
 
   header {
@@ -329,9 +462,17 @@ footer {
     position: relative;
     z-index: 10;
     background-color: rgb(255, 255, 255);
-    margin-left: -8px;
+    margin-left: -18px;
     padding-top: 5px;
+    padding-bottom: 20px;
     width: 100vw;
+    margin-bottom: -20px;
+  }
+
+  .titre_plats {
+    position: relative;
+    margin-left: 0;
+    z-index: 30;
   }
 
   .bouton_explorer {
@@ -345,6 +486,7 @@ footer {
     margin-left: auto;
     margin-right: auto;
     display: block;
+    font-size: 15px;
   }
 
   .logo_chiffre {
@@ -361,7 +503,7 @@ footer {
   }
 
   main {
-    padding: 0rem 0.5rem 0rem 0.5rem;
+    padding: 0;
   }
 
   .box_menu {
@@ -371,11 +513,14 @@ footer {
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
+    min-width: 0px;
+    cursor: pointer;
   }
 
   .prix {
     float: right;
-    margin-top: -50px;
+    margin-top: 0px;
     margin-left: -20px;
     font-weight: bold;
   }
@@ -387,6 +532,7 @@ footer {
 
   .box_menu p {
     width: 80%;
+    margin-top: 0;
   }
 
   .ligne_box_menu {
@@ -415,13 +561,44 @@ footer {
   .restaurant {
   }
 
+  .wrap_entrées {
+    position: relative;
+    animation: 1.5s ease-in 0s reverse both running slidein;
+    z-index: 100;
+  }
+
+  .wrap_plats {
+    position: relative;
+    animation: 2s ease-in 0s reverse both running slidein;
+    z-index: 100;
+  }
+
+  .wrap_desserts {
+    position: relative;
+    animation: 2.5s ease-in 0s reverse both running slidein;
+    z-index: 100;
+  }
+
+  @keyframes slidein {
+    from {
+      transform: translatey(0px);
+      opacity: 1;
+    }
+
+    to {
+      transform: translatey(20px);
+      opacity: 0;
+    }
+  }
+
   .logo_hearth {
     float: right;
     padding-right: 20px;
-    margin-top: -55px;
+    margin-top: -35px;
     font-size: 25px;
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    left: inherit;
   }
 
   .logo_hearth :hover {
@@ -430,9 +607,22 @@ footer {
     text-shadow: none;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    animation: earth 0.2s linear;
   }
 
-  .box_menu {
+  @keyframes earth {
+    from {
+      transform: translatex(-5px);
+      color: white;
+      opacity: 0;
+      font-size: 10px;
+    }
+    to {
+      transform: translatex(0px);
+      color: linear-gradient(#9356dc, #ff79da);
+      opacity: 1;
+      font-size: 25px;
+    }
   }
 
   footer {
@@ -442,7 +632,8 @@ footer {
     width: 100vw;
     box-sizing: border-box;
     color: white;
-    margin-left: -8px;
+    margin-left: -18px;
+    text-align: inherit;
   }
 
   .logo_footer {
@@ -481,6 +672,7 @@ footer {
   .footer_contact ul a {
     color: white;
     text-decoration: none;
+    font-size: 13px;
   }
 
   .footer_contact ul a:hover {

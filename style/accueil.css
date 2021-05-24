@@ -1,27 +1,77 @@
 body {
   font-family: "Roboto", sans-serif;
-  padding: 0;
+  padding: 0px 10px 0px 10px;
   margin-bottom: -5px;
 }
 
+aside {
+  animation: opacity 2s linear;
+}
 
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.loader {
+  position: absolute;
+  z-index: 100;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #9356dc;
+  border-bottom: 16px solid #9356dc;
+  border-radius: 50%;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+
+  width: 120px;
+  height: 120px;
+  opacity: 0;
+  animation: spin 2s linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+
+  90% {
+    transform: rotate(340deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
 
 h1 {
-  font-size: 100px;
+  font-size: 22px;
   font-weight: bold;
   text-align: center;
 }
 
 h2 {
-  font-size: 90px;
+  font-size: 20px;
 }
 
 p {
-  font-size: 80px;
+  font-size: 17px;
 }
 
 .logo_head {
-  width: 150px;
+  width: 200px;
   position: relative;
   text-align: center;
 }
@@ -47,9 +97,9 @@ p {
   padding-right: 0;
   padding-left: 0;
   margin-top: 0;
-  margin-left: -8px;
+  margin-left: -18px;
   box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.185);
-  font-size: 80px;
+  font-size: 20px;
 }
 
 .bannière_location ul li {
@@ -68,36 +118,31 @@ header {
 .bouton_explorer {
   color: white;
   background: linear-gradient(#ff79da, #9356dc);
-  padding: 50px;
+  padding: 20px;
   border-radius: 100px;
   border: none;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.185);
-  margin-bottom: 100px;
-  animation-duration: 3s;
-
-  font-size:80px;
+  margin-bottom: 50px;
+  font-size: 17px;
 }
 
-.bouton_explorer_menu {
-  color: white;
-  background: linear-gradient(#ff79da, #9356dc);
-  padding: 15px;
-  border-radius: 30px;
-  border: none;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.185);
+.bouton_explorer:hover {
+  background: linear-gradient(#ff91e0, #9460d3);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.445);
 }
 
 .logo_chiffre {
   color: white;
-  padding: 5px 10px 5px 10px;
+  padding: 2px 5px 5px 5px;
   background-color: #9356dc;
-  border-radius: 20px;
+  border-radius: 30px;
   font-weight: normal;
   margin-top: -5px;
+  font-size: 20px;
 }
 
 .fonctionnement {
-  margin-bottom: 300px;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: row;
   width: 80%;
@@ -113,34 +158,39 @@ header {
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 80px;
+  font-size: 17px;
   width: 25%;
 }
 
 .box_fonctionnement ul {
   display: flex;
-  flex-direction: row;
+
   list-style: none;
-  margin-left: -80px;
 }
 
 .box_fonctionnement ul li {
+  display: inline;
   font-weight: bold;
-  margin-left: 50px;
 }
 
 .box_fonctionnement ul li i {
   color: #686565;
-  margin-left: -40px;
+}
+
+.box_fonctionnement p {
+  color: #686565;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: black;
+  text-align: center;
 }
 
 .logo_composez_2 {
-  margin-left: -17px;
-  height: 20px;
-  width: 30px;
+  position: relative;
+  left: -20px;
 }
 
-.logo_store li i {
+.box_fonctionnement .logo_store i {
   color: #9356dc;
 }
 
@@ -157,11 +207,11 @@ header {
 .box_restaurants i {
   float: right;
   font-weight: bold;
-  padding-right: 50px;
-  margin-top: -15rem;
-  font-size: 10rem;
+  padding-right: 20px;
+  margin-top: -60px;
+  font-size: 30px;
   color: white;
-  text-shadow: -5px 0 black, 0 -5px black, 5px 0 black, 0 5px black;
+  text-shadow: -2px 0 black, 0 -2px black, 2px 0 black, 0 2px black;
 }
 
 .box_restaurants i:hover {
@@ -170,11 +220,21 @@ header {
   text-shadow: none;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  animation: earth 0.2s linear;
+}
+
+@keyframes earth {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .box_restaurants {
   border: 0px;
-  height: fit-content;
+  height: 260px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.103);
   margin-bottom: 50px;
   padding-bottom: 20px;
@@ -182,6 +242,10 @@ header {
   border-radius: 20px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.box_restaurants:hover {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.103);
 }
 
 .texte_box_restaurants p {
@@ -193,8 +257,7 @@ header {
   object-position: bottom;
   width: 100%;
   min-width: 150px;
-
-  height: 600px;
+  height: 200px;
   border-radius: 20px 20px 0px 0px;
 }
 
@@ -220,31 +283,32 @@ footer {
   background-color: #353535;
   padding: 10px 20px;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
   box-sizing: border-box;
   color: white;
-  margin-left: -10px;
+  margin-left: -18px;
 }
 
 .logo_footer {
-  width: 40rem;
+  width: 100px;
   padding-top: 10px;
   padding-left: 10px;
 }
 
 .footer_couverts ul li {
   display: inline-block;
-  font-size: 5rem;
+  font-size: 20px;
   margin-top: -10px;
 }
 
 .footer_couverts ul li i {
   margin-left: -30px;
+  font-size: 20px;
 }
 
 .footer_handshake {
   margin-top: -30px;
-  font-size: 5rem;
+  font-size: 15px;
 }
 
 .footer_handshake ul li {
@@ -272,32 +336,25 @@ footer {
 }
 
 @media only screen and (min-width: 1280px) {
-  
-  
-  
   .box_restaurants img {
     border-radius: 50px 50px 0px 0px;
   }
 
   .restaurant {
-    margin-bottom: 10rem;
+    margin-bottom: 100px;
   }
 
   .logo_chiffre {
     position: relative;
-    padding: 20px 40px 20px 40px;
-    border-radius: 100px;
+    padding: 5px 0px 5px 0px;
+    border-radius: 20px;
     margin-left: -50px;
+    text-align: center;
   }
 
   .box_fonctionnement ul li {
-    margin-left: 100px;
+    margin-left: 20px;
   }
-
-  .logo_composez_2 {
-    margin-left: -60px;
-  }
-
 
   footer {
     background-color: #353535;
@@ -305,32 +362,32 @@ footer {
     width: 100vw;
     box-sizing: border-box;
     color: white;
-    margin-left: -10px;
-    display: flex;
-    flex-direction: row;
+    margin-left: -18px;
+    text-align: center;
   }
 
   .logo_footer {
-    width: 40rem;
+    width: 100px;
     padding-top: 10px;
     padding-left: 10px;
     height: 100%;
   }
 
-  .footer_couverts ul  {
-    display: flex;
-    flex-direction: column;
-    font-size: 5rem;
-    margin-top: 0;
+  .footer_couverts ul li {
+    font-size: 15px;
+  }
+
+  .footer_couverts ul {
+    margin-top: 5px;
   }
 
   .footer_couverts ul li i {
-    margin-left: 0;
+    margin-left: -30px;
   }
 
   .footer_handshake {
-    margin-top: -30px;
-    font-size: 5rem;
+    font-size: 15px;
+    margin-top: -5px;
   }
 
   .footer_handshake ul li {
@@ -339,18 +396,20 @@ footer {
 
   .footer_handshake ul li i {
     margin-left: -30px;
+    font-size: 15px;
   }
 
   .footer_contact ul {
     list-style: none;
-    margin-top: -15px;
+    margin-top: 5px;
     margin-left: -30px;
   }
 
-  .footer_contact ul a {
+  .footer_contact ul li {
     color: white;
     text-decoration: none;
-    font-size: 80px;
+    font-size: 15px;
+    margin-top: 10px;
   }
 
   .footer_contact ul a:hover {
@@ -361,23 +420,23 @@ footer {
 
 @media only screen and (max-width: 1280px) {
   h1 {
-    font-size: 35px;
+    font-size: 20px;
   }
 
   h2 {
-    font-size: 30px;
+    font-size: 17px;
   }
 
   p {
-    font-size: 25px;
+    font-size: 15px;
   }
 
   .logo_head {
-    width: 300px;
+    width: 200px;
   }
 
   .bannière_location ul {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .bouton_explorer {
@@ -385,12 +444,8 @@ footer {
     border-radius: 30px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.185);
     margin-bottom: 50px;
-    width: 50%;
-    font-size: 25px;
-  }
-
-  .bouton_explorer_menu {
-    margin-bottom: 50px;
+    width: fit-content;
+    font-size: 17px;
   }
 
   .logo_chiffre {
@@ -404,7 +459,7 @@ footer {
   }
 
   .box_fonctionnement {
-    font-size: 25px;
+    font-size: 17px;
     width: 80%;
   }
 
@@ -413,61 +468,112 @@ footer {
 
   .box_fonctionnement ul li {
     text-align: center;
+    margin-left: 20px;
   }
 
   .box_fonctionnement ul li i {
   }
 
-  .logo_composez_2 {
-    margin-left: -30px;
-  }
-
   .restaurant {
-    display: block;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
   }
 
   .box_restaurants i {
     padding-right: 20px;
-    margin-top: -70px;
-    font-size: 40px;
+    margin-top: -50px;
+    font-size: 30px;
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   }
 
   .box_restaurants {
     width: 80%;
+    height: 260px;
   }
 
   .box_restaurants img {
-    height: 250px;
+    height: 200px;
+    object-position: center;
   }
 
   footer {
-    margin-left: -8px;
+    background-color: #353535;
+    bottom: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    color: white;
+    margin-left: -18px;
   }
 
   .logo_footer {
-    width: 200px;
+    width: 100px;
+    padding-top: 10px;
+    padding-left: 10px;
+    height: 100%;
   }
 
   .footer_couverts ul li {
-    margin-top: -10px;
-    font-size: 30px;
+    font-size: 15px;
+  }
+
+  .footer_couverts ul {
+    margin-top: 5px;
+  }
+
+  .footer_couverts ul li i {
+    margin-left: -30px;
   }
 
   .footer_handshake {
-    font-size: 30px;
+    font-size: 15px;
+    margin-top: -5px;
+  }
+
+  .footer_handshake ul li {
+    display: inline-block;
   }
 
   .footer_handshake ul li i {
     margin-left: -30px;
+    font-size: 10px;
   }
 
   .footer_contact ul {
-    font-size: 25px;
+    list-style: none;
+    margin-top: 5px;
+    margin-left: -30px;
+  }
+
+  .footer_contact ul li {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  .footer_couverts ul li i {
+    font-size: 10px;
+  }
+
+  .footer_contact ul a:hover {
+    color: #9356dc;
+    text-decoration: none;
   }
 }
 
 @media only screen and (max-width: 600px) {
+  body {
+    padding: 0px 10px 0px 10px;
+  }
+
+  .loader {
+    left: 30%;
+    top: 30%;
+    width: 100px;
+    height: 100px;
+  }
+
   h1 {
     font-size: 20px;
     text-align: inherit;
@@ -487,6 +593,7 @@ footer {
 
   .bannière_location ul {
     font-size: 15px;
+    margin-left: -18px;
   }
 
   .bouton_explorer {
@@ -504,20 +611,27 @@ footer {
   .logo_chiffre {
     font-size: 15px;
     padding: 5px 10px 5px 10px;
+    margin-left: -30px;
   }
 
   .fonctionnement {
     margin-bottom: 80px;
+    display: block;
+    width: 105%;
+    margin-left: -10px;
   }
 
   .box_fonctionnement {
-    margin-left: 0;
     font-size: 15px;
-    width: 100%;
+  }
+
+  .box_fonctionnement ul {
+    padding-left: 0px;
   }
 
   .box_fonctionnement ul li {
-    margin-left: 20px;
+    margin-left: 10px;
+    text-align: center;
   }
 
   .box_fonctionnement ul li i {
@@ -525,7 +639,12 @@ footer {
   }
 
   .logo_composez_2 {
-    margin-left: -20px;
+    position: relative;
+    left: -10px;
+  }
+
+  .restaurant {
+    display: block;
   }
 
   .box_restaurants i {
@@ -547,11 +666,12 @@ footer {
   }
 
   .box_restaurants .nouveau {
-    right: 10px;
+    right: 30px;
   }
 
   footer {
-    margin-left: -8px;
+    margin-left: -18px;
+    text-align: left;
   }
 
   .logo_footer {
@@ -560,6 +680,11 @@ footer {
 
   .footer_couverts ul li {
     margin-top: -10px;
+    font-size: 15px;
+  }
+
+  .footer_couverts ul li i {
+    margin-left: -30px;
     font-size: 15px;
   }
 
