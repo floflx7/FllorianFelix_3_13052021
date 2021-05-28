@@ -4,7 +4,7 @@ body {
   margin-bottom: -5px;
 }
 
-aside {
+main {
   animation: opacity 2s linear;
 }
 
@@ -23,16 +23,17 @@ aside {
 }
 
 .loader {
-  position: absolute;
+  position: fixed;
   z-index: 100;
   border: 16px solid #f3f3f3;
   border-top: 16px solid #9356dc;
   border-bottom: 16px solid #9356dc;
   border-radius: 50%;
-  left: 50%;
-  right: 50%;
+  margin: 0;
   top: 50%;
-
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
   width: 120px;
   height: 120px;
   opacity: 0;
@@ -41,17 +42,17 @@ aside {
 
 @keyframes spin {
   0% {
-    transform: rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
     opacity: 1;
   }
 
   90% {
-    transform: rotate(340deg);
+    transform: translate(-50%, -50%) rotate(340deg);
     opacity: 1;
   }
 
   100% {
-    transform: rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
     opacity: 0;
   }
 }
@@ -124,6 +125,7 @@ header {
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.185);
   margin-bottom: 50px;
   font-size: 17px;
+  width: fit-content;
 }
 
 .bouton_explorer:hover {
@@ -171,6 +173,7 @@ header {
 .box_fonctionnement ul li {
   display: inline;
   font-weight: bold;
+  text-align: center;
 }
 
 .box_fonctionnement ul li i {
@@ -204,17 +207,32 @@ header {
   flex-direction: row;
 }
 
-.box_restaurants i {
+.logo_hearth {
+  display: none;
+}
+
+.logo_hearth_2 {
   float: right;
-  font-weight: bold;
+  padding-right: 20px;
+  margin-top: -30px;
+  font-size: 30px;
+  color: black;
+}
+
+.logo_hearth_2 :focus {
+  background: linear-gradient(#ff91e0, #9460d3);
+}
+
+.logo_hearth_2 {
+  float: right;
   padding-right: 20px;
   margin-top: -60px;
   font-size: 30px;
   color: white;
-  text-shadow: -2px 0 black, 0 -2px black, 2px 0 black, 0 2px black;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-.box_restaurants i:hover {
+.logo_hearth_2 :hover {
   color: #9356dc;
   background: linear-gradient(#9356dc, #ff79da);
   text-shadow: none;
@@ -261,9 +279,6 @@ header {
   border-radius: 20px 20px 0px 0px;
 }
 
-.box_menu {
-}
-
 .box_restaurants .nouveau {
   position: absolute;
   width: fit-content;
@@ -283,7 +298,7 @@ footer {
   background-color: #353535;
   padding: 10px 20px;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
   box-sizing: border-box;
   color: white;
   margin-left: -18px;
@@ -356,20 +371,9 @@ footer {
     margin-left: 20px;
   }
 
-  footer {
-    background-color: #353535;
-    bottom: 0;
-    width: 100vw;
-    box-sizing: border-box;
-    color: white;
-    margin-left: -18px;
-    text-align: center;
-  }
+  
 
   .logo_footer {
-    width: 100px;
-    padding-top: 10px;
-    padding-left: 10px;
     height: 100%;
   }
 
@@ -390,19 +394,12 @@ footer {
     margin-top: -5px;
   }
 
-  .footer_handshake ul li {
-    display: inline-block;
-  }
-
   .footer_handshake ul li i {
-    margin-left: -30px;
     font-size: 15px;
   }
 
   .footer_contact ul {
-    list-style: none;
     margin-top: 5px;
-    margin-left: -30px;
   }
 
   .footer_contact ul li {
@@ -410,11 +407,6 @@ footer {
     text-decoration: none;
     font-size: 15px;
     margin-top: 10px;
-  }
-
-  .footer_contact ul a:hover {
-    color: #9356dc;
-    text-decoration: none;
   }
 }
 
@@ -431,21 +423,9 @@ footer {
     font-size: 15px;
   }
 
-  .logo_head {
-    width: 200px;
-  }
-
-  .bannière_location ul {
-    font-size: 20px;
-  }
-
   .bouton_explorer {
     padding: 15px;
     border-radius: 30px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.185);
-    margin-bottom: 50px;
-    width: fit-content;
-    font-size: 17px;
   }
 
   .logo_chiffre {
@@ -463,15 +443,9 @@ footer {
     width: 80%;
   }
 
-  .box_fonctionnement ul {
-  }
-
   .box_fonctionnement ul li {
     text-align: center;
     margin-left: 20px;
-  }
-
-  .box_fonctionnement ul li i {
   }
 
   .restaurant {
@@ -484,33 +458,10 @@ footer {
     padding-right: 20px;
     margin-top: -50px;
     font-size: 30px;
-    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   }
 
   .box_restaurants {
     width: 80%;
-    height: 260px;
-  }
-
-  .box_restaurants img {
-    height: 200px;
-    object-position: center;
-  }
-
-  footer {
-    background-color: #353535;
-    bottom: 0;
-    width: 100vw;
-    box-sizing: border-box;
-    color: white;
-    margin-left: -18px;
-  }
-
-  .logo_footer {
-    width: 100px;
-    padding-top: 10px;
-    padding-left: 10px;
-    height: 100%;
   }
 
   .footer_couverts ul li {
@@ -521,28 +472,17 @@ footer {
     margin-top: 5px;
   }
 
-  .footer_couverts ul li i {
-    margin-left: -30px;
-  }
-
   .footer_handshake {
     font-size: 15px;
     margin-top: -5px;
   }
 
-  .footer_handshake ul li {
-    display: inline-block;
-  }
-
   .footer_handshake ul li i {
-    margin-left: -30px;
     font-size: 10px;
   }
 
   .footer_contact ul {
-    list-style: none;
     margin-top: 5px;
-    margin-left: -30px;
   }
 
   .footer_contact ul li {
@@ -555,21 +495,10 @@ footer {
   .footer_couverts ul li i {
     font-size: 10px;
   }
-
-  .footer_contact ul a:hover {
-    color: #9356dc;
-    text-decoration: none;
-  }
 }
 
 @media only screen and (max-width: 600px) {
-  body {
-    padding: 0px 10px 0px 10px;
-  }
-
   .loader {
-    left: 30%;
-    top: 30%;
     width: 100px;
     height: 100px;
   }
@@ -599,13 +528,7 @@ footer {
   .bouton_explorer {
     padding: 15px;
     border-radius: 30px;
-    margin-bottom: 50px;
     font-size: 15px;
-    width: fit-content;
-  }
-
-  .bouton_explorer_menu {
-    margin-bottom: 50px;
   }
 
   .logo_chiffre {
@@ -631,7 +554,6 @@ footer {
 
   .box_fonctionnement ul li {
     margin-left: 10px;
-    text-align: center;
   }
 
   .box_fonctionnement ul li i {
@@ -639,7 +561,6 @@ footer {
   }
 
   .logo_composez_2 {
-    position: relative;
     left: -10px;
   }
 
@@ -651,7 +572,6 @@ footer {
     padding-right: 20px;
     margin-top: -50px;
     font-size: 25px;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   }
 
   .box_restaurants {
@@ -674,21 +594,12 @@ footer {
     text-align: left;
   }
 
-  .logo_footer {
-    width: 100px;
-  }
-
   .footer_couverts ul li {
     margin-top: -10px;
     font-size: 15px;
   }
 
   .footer_couverts ul li i {
-    margin-left: -30px;
-    font-size: 15px;
-  }
-
-  .footer_handshake {
     font-size: 15px;
   }
 
