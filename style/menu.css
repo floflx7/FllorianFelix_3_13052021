@@ -1,13 +1,9 @@
-
-
 body {
   font-family: "Roboto", sans-serif;
   padding: 0px 10px 0px 10px;
   margin-top: 0;
   margin-bottom: 0;
 }
-
-
 
 h1 {
   font-size: 20px;
@@ -55,7 +51,7 @@ p {
 
 .img_header {
   width: 100vw;
-  height: 500px;
+  height: 300px;
   object-fit: cover;
   object-position: center;
   padding: 0;
@@ -63,10 +59,17 @@ p {
   margin-left: -18px;
 }
 
+.wrap_titre {
+  padding: 10px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.185);
+}
+
 .titre_page_menu {
-  position: relative;
-  left: 24%;
-  width: 300px;
+  text-align: center;
 }
 
 .a_la_française {
@@ -76,9 +79,9 @@ p {
   z-index: 10;
   background-color: rgb(255, 255, 255);
   margin-left: -18px;
-  padding-top: 5px;
+  padding-top: 30px;
   width: 100vw;
-  
+  margin-bottom: 30px;
 }
 
 .bouton_explorer {
@@ -87,25 +90,25 @@ p {
   padding: 15px 40px 15px 40px;
   border-radius: 30px;
   border: none;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.185);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.253);
   margin-bottom: 50px;
-  margin-top: 90px;
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
   display: block;
   font-size: 17px;
   cursor: initial;
+  font-weight: bold;
 }
-
 
 .bouton_explorer:focus {
   background: linear-gradient(#ff91e0, #9460d3);
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.445);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.445);
 }
 
 .titre_plats {
   position: relative;
-  margin-left: 25%;
+  margin-left: 8%;
   z-index: 30;
 }
 
@@ -114,143 +117,160 @@ p {
   width: 40px;
   margin-top: -10px;
   margin-bottom: 10px;
-  margin-left: 25%;
+  margin-left: 8%;
 }
 
 .box_menu {
-  padding: 1px 5px 1px 5px;
+  padding: 0px 0px 0px 5px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.192);
   border-radius: 20px;
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 85%;
+  display: flex;
+  height: fit-content;
 }
 
-
-.check {
+.box_menu .check {
   position: relative;
   color: white;
   background-color: #99e2d0;
   padding: 10px;
   display: block;
-  padding: 32px 0;
-  top: -83px;
+  padding: 30px 0px;
   text-align: center;
-  width: 10%;
+  width: 0%;
   float: right;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: clip;
   border-radius: 0px 20px 20px 0px;
-  left: 5px;
-  display: none;
+  opacity: 0;
+  animation: 0.5s ease-out checkout;
 }
 
-.box_menu:hover .prix p{
-  
-  animation: 0.5s ease-in  reverse both  prix;
-}
-
-@keyframes prix{
+@keyframes checkout {
   0% {
-    margin-left: -250px;
+    width: 20%;
+    opacity: 1;
   }
-  
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    width: 0%;
+    opacity: 0;
+  }
+}
+
+.prix {
+  float: right;
+  margin-top: 50px;
+  margin-left: -20px;
+  font-weight: bold;
+  padding-right: 20px;
+}
+
+@keyframes prix_out {
+  0% {
+    margin-left: -50px;
+  }
+
+  100% {
+    margin-left: -20px;
+  }
+}
+
+.box_menu:hover .prix p {
+  animation: 0.5s ease-in reverse both prix;
+}
+
+@keyframes prix {
+  0% {
+    margin-left: -50px;
+  }
+
   100% {
     margin-left: 0px;
   }
 }
 
-
-.box_menu:hover .texte_menu p {
- 
-  
-  overflow: hidden;
-
-white-space: nowrap;
-animation: 0.5s ease-in   both  width;
+.texte_menu {
+  width: 100%;
 }
 
-
+.box_menu:hover .texte_menu p {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: 0.5s ease-in both width;
+  text-overflow: ellipsis;
+}
 
 @keyframes width {
   0% {
     width: 100%;
   }
-  
-  50% {
-    width: 65%;
+
+  20% {
+    width: 75%;
     text-overflow: ellipsis;
   }
-  
+
   100% {
-    width: 60%;
+    width: 70%;
     text-overflow: ellipsis;
-    
   }
 }
 
-
 .check i {
   font-size: 20px;
-  
+  transition: transform 1s;
 }
 
 .box_menu:hover {
   transition: all 1s ease-out;
 }
 
-
 .box_menu:hover .check {
-  
-  animation: 0.5s ease-in  reverse both check;
-  transition: width 1s;
-  display: block;
-  
-}
-
-@keyframes checkout {
-  0% {
-    width:0%;
-  }
-  100% {
-    width: 10%;
-  }
+  opacity: 1;
+  animation: 0.5s ease-in reverse both check;
 }
 
 @keyframes check {
   0% {
-    
     width: 20%;
   }
-  
+
   100% {
-    width: 1%;
-   display: none;
-   
+    width: 0%;
   }
 }
 
-
+.check i {
+  vertical-align: center;
+}
 
 .box_menu:hover .check i {
   animation: 0.5s alternate rotate;
-  transition: width 2s, height 2s, background-color 2s, transform 2s;
 }
 
 @keyframes rotate {
   0% {
-    
-    
     transform: rotate(90deg);
-    
   }
   100% {
-    
-    
-    transform: rotate(360deg)
+    transform: rotate(360deg);
   }
+}
+
+.wrap_entier {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .wrap_entrées {
@@ -272,22 +292,19 @@ animation: 0.5s ease-in   both  width;
 }
 
 @keyframes slidein {
-  from {
+  0% {
     transform: translatey(0px);
     opacity: 1;
   }
 
-  to {
+  80% {
+    opacity: 0;
+  }
+
+  100% {
     transform: translatey(20px);
     opacity: 0;
   }
-}
-
-.prix {
-  float: right;
-  margin-top: -30px;
-  margin-left: -20px;
-  font-weight: bold;
 }
 
 .box_menu h2 {
@@ -299,7 +316,6 @@ animation: 0.5s ease-in   both  width;
   width: 80%;
   margin-top: 0;
   height: fit-content;
-  
 }
 
 .ligne_box_menu {
@@ -311,13 +327,24 @@ animation: 0.5s ease-in   both  width;
 
 .logo_hearth {
   float: right;
-  margin-right: 26%;
+  text-align: center;
   margin-top: -45px;
   font-size: 25px;
   color: white;
   position: relative;
   z-index: 101;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  right: 20%;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .logo_hearth :hover {
@@ -327,7 +354,6 @@ animation: 0.5s ease-in   both  width;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   animation: earth 0.2s linear;
-  
 }
 
 .box_restaurants i:hover {
@@ -337,7 +363,6 @@ animation: 0.5s ease-in   both  width;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   animation: earth 0.2s linear;
-  
 }
 
 @keyframes earth {
@@ -349,7 +374,6 @@ animation: 0.5s ease-in   both  width;
   }
 }
 
-
 footer {
   background-color: #353535;
   padding: 10px 0px 10px 20px;
@@ -358,7 +382,6 @@ footer {
   box-sizing: border-box;
   color: white;
   margin-left: -18px;
-  
 }
 
 .logo_footer {
@@ -375,7 +398,7 @@ footer {
 
 .footer_couverts ul li i {
   margin-left: -30px;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .footer_handshake {
@@ -389,6 +412,7 @@ footer {
 
 .footer_handshake ul li i {
   margin-left: -30px;
+  font-size: 15px;
 }
 
 .footer_contact ul {
@@ -434,18 +458,19 @@ footer {
 
   .img_header {
     width: 100vw;
-    height: 300px;
+    height: 250px;
     padding: 0;
     z-index: 0;
     margin-left: -18px;
     object-fit: cover;
   }
 
+  .wrap_titre {
+    width: 40%;
+  }
+
   .logo_hearth {
     position: relative;
-    font-size: 30px;
-    float: right;
-    left: -10%;
   }
 
   h1 {
@@ -460,13 +485,12 @@ footer {
     font-size: 15px;
   }
 
-  .titre_page_menu {
-    position: relative;
-    left: 9%;
+  .logo_hearth {
+    right: 5%;
   }
 
-  .logo_hearth {
-    margin-right: 3%;
+  .wrap_entier {
+    display: block;
   }
 
   .titre_plats {
@@ -481,11 +505,12 @@ footer {
 
   .prix {
     position: relative;
-    top: -30px;
+    top: 45px;
     left: -20px;
     float: right;
     margin-top: 0px;
     font-weight: bold;
+    padding-right: 20px;
   }
 
   .box_menu {
@@ -493,16 +518,12 @@ footer {
     max-width: 1000px;
     min-width: 600px;
   }
-  .box_menu:hover .prix p{
-  
-    animation: 0.5s ease-in  reverse both prix;
-  }
-  
-  @keyframes prix{
+
+  @keyframes prix {
     0% {
-      margin-left: -200px;
+      margin-left: -50px;
     }
-    
+
     100% {
       margin-left: 0px;
     }
@@ -542,6 +563,12 @@ footer {
   .titre_page_menu {
     position: relative;
     left: 0px;
+    text-align: inherit;
+  }
+
+  .wrap_titre {
+    width: 90%;
+    box-shadow: inherit;
   }
 
   .logo_head {
@@ -576,10 +603,6 @@ footer {
     z-index: 0;
     margin-left: -18px;
     object-position: bottom;
-  }
-
-  .logo_hearth {
-    margin-right: 2%;
   }
 
   .a_la_française {
@@ -625,10 +648,6 @@ footer {
     margin-top: -5px;
   }
 
-  
-
-  
-
   .check {
     position: relative;
     color: white;
@@ -636,7 +655,7 @@ footer {
     padding: 10px;
     display: block;
     padding: 29px 0;
-    top: -77px;
+    top: 0px;
     text-align: center;
     width: 10%;
     float: right;
@@ -644,13 +663,30 @@ footer {
     white-space: nowrap;
     text-overflow: clip;
     border-radius: 0px 20px 20px 0px;
-    left: 5px;
+    left: 0px;
+    opacity: 0;
     display: none;
+    animation: 0.5s checkout;
   }
 
+  @keyframes checkout {
+    0% {
+      width: 20%;
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    100% {
+      width: 0%;
+      opacity: 0;
+    }
+  }
 
   .box_menu {
-    padding: 1px 5px 1px 5px;
+    padding: 0px 0px 0px 5px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.192);
     border-radius: 20px;
     margin-bottom: 20px;
@@ -658,20 +694,17 @@ footer {
     margin-right: auto;
     width: 100%;
     min-width: 0px;
-    cursor: pointer;
   }
 
-
-  .box_menu:hover .prix p{
-  
-    animation: 0.5s ease-in  reverse both prix;
+  .box_menu:hover .prix p {
+    animation: 0.5s ease-in reverse both prix;
   }
-  
-  @keyframes prix{
+
+  @keyframes prix {
     0% {
-      margin-left: -80px;
+      margin-left: -30px;
     }
-    
+
     100% {
       margin-left: 0px;
     }
@@ -679,9 +712,10 @@ footer {
 
   .prix {
     float: right;
-    margin-top: 0px;
+    margin-top: -px;
     margin-left: -20px;
     font-weight: bold;
+    padding-right: 0px;
   }
 
   .box_menu h2 {
@@ -717,24 +751,21 @@ footer {
     color: #686565;
   }
 
-  .restaurant {
-  }
-
   .wrap_entrées {
     position: relative;
-    animation: 1.5s ease-in 0s reverse both  slidein;
+    animation: 1.5s ease-in 0s reverse both slidein;
     z-index: 100;
   }
 
   .wrap_plats {
     position: relative;
-    animation: 2s ease-in 0s reverse both  slidein;
+    animation: 2s ease-in 0s reverse both slidein;
     z-index: 100;
   }
 
   .wrap_desserts {
     position: relative;
-    animation: 2.5s ease-in 0s reverse both  slidein;
+    animation: 2.5s ease-in 0s reverse both slidein;
     z-index: 100;
   }
 
@@ -752,12 +783,12 @@ footer {
 
   .logo_hearth {
     float: right;
-    padding-right: 20px;
     margin-top: -40px;
     font-size: 25px;
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     left: inherit;
+    right: 5%;
   }
 
   .logo_hearth :hover {
