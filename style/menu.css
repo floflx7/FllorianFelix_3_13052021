@@ -751,36 +751,6 @@ footer {
     color: #686565;
   }
 
-  .wrap_entrées {
-    position: relative;
-    animation: 1.5s ease-in 0s reverse both slidein;
-    z-index: 100;
-  }
-
-  .wrap_plats {
-    position: relative;
-    animation: 2s ease-in 0s reverse both slidein;
-    z-index: 100;
-  }
-
-  .wrap_desserts {
-    position: relative;
-    animation: 2.5s ease-in 0s reverse both slidein;
-    z-index: 100;
-  }
-
-  @keyframes slidein {
-    from {
-      transform: translatey(0px);
-      opacity: 1;
-    }
-
-    to {
-      transform: translatey(20px);
-      opacity: 0;
-    }
-  }
-
   .logo_hearth {
     float: right;
     margin-top: -40px;
