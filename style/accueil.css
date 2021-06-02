@@ -2,6 +2,8 @@ body {
   font-family: "Roboto", sans-serif;
   padding: 0px 10px 0px 10px;
   margin-bottom: -5px;
+  white-space: nowrap;
+  overflow-x: hidden;
 }
 
 main {
@@ -154,7 +156,7 @@ header {
   display: block;
   font-size: 17px;
   cursor: initial;
-  font-weight: bold;
+  
 }
 
 .bouton_explorer:focus {
@@ -467,6 +469,14 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
+  body {
+    font-family: "Roboto", sans-serif;
+    padding: 0px 10px 0px 10px;
+    margin-bottom: -5px;
+    white-space: initial;
+    overflow-x: hidden;
+  }
+
   .loader {
     width: 100px;
     height: 100px;

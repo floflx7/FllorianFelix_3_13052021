@@ -3,6 +3,9 @@ body {
   padding: 0px 10px 0px 10px;
   margin-top: 0;
   margin-bottom: 0;
+
+  white-space: nowrap;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -98,7 +101,7 @@ p {
   display: block;
   font-size: 17px;
   cursor: initial;
-  font-weight: bold;
+  
 }
 
 .bouton_explorer:focus {
@@ -444,6 +447,15 @@ footer {
 }
 
 @media only screen and (max-width: 1280px) {
+  body {
+    font-family: "Roboto", sans-serif;
+    padding: 0px 10px 0px 10px;
+    margin-bottom: -5px;
+    white-space: initial;
+    overflow-x: hidden;
+  }
+  
+  
   .logo_head {
     width: 200px;
     padding: 20px;
@@ -541,8 +553,9 @@ footer {
   body {
     font-family: "Roboto", sans-serif;
     padding: 0px 10px 0px 10px;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: -5px;
+    white-space: initial;
+    overflow-x: hidden;
   }
 
   h2 {
@@ -721,6 +734,10 @@ footer {
   .box_menu h2 {
     font-weight: bold;
     text-transform: none;
+  }
+
+  .texte_menu_2 p {
+    white-space: initial;
   }
 
   .box_menu p {
