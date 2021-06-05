@@ -1,10 +1,8 @@
 body {
   font-family: "Roboto", sans-serif;
-  padding: 0px 10px 0px 10px;
-  margin-top: 0;
-  margin-bottom: 0;
+  padding: 0px 18px 0px 18px;
+  margin: 0px;
 
-  white-space: nowrap;
   overflow-x: hidden;
 }
 
@@ -101,10 +99,9 @@ p {
   display: block;
   font-size: 17px;
   cursor: initial;
-  
 }
 
-.bouton_explorer:focus {
+.bouton_explorer:hover {
   background: linear-gradient(#ff91e0, #9460d3);
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.445);
 }
@@ -212,7 +209,7 @@ p {
   width: 100%;
 }
 
-.texte_menu p  {
+.texte_menu p {
   animation: 0.5s ease-in reverse both width-out;
   overflow: hidden;
   white-space: nowrap;
@@ -233,8 +230,6 @@ p {
     text-overflow: ellipsis;
   }
 }
-
-
 
 .box_menu:hover .texte_menu p {
   overflow: hidden;
@@ -478,15 +473,14 @@ footer {
 }
 
 @media only screen and (max-width: 1280px) {
-  body {
-    font-family: "Roboto", sans-serif;
-    padding: 0px 10px 0px 10px;
-    margin-bottom: -5px;
-    white-space: initial;
+  html {
     overflow-x: hidden;
   }
-  
-  
+
+  body {
+    position: relative;
+    overflow-x: hidden;
+  }
   .logo_head {
     width: 200px;
     padding: 20px;
@@ -581,11 +575,12 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
+  html {
+    overflow-x: hidden;
+  }
+
   body {
-    font-family: "Roboto", sans-serif;
-    padding: 0px 10px 0px 10px;
-    margin-bottom: -5px;
-    white-space: initial;
+    position: relative;
     overflow-x: hidden;
   }
 
@@ -645,7 +640,7 @@ footer {
     object-fit: cover;
     padding: 0;
     z-index: 0;
-    margin-left: -18px;
+
     object-position: bottom;
   }
 
@@ -655,7 +650,7 @@ footer {
     position: relative;
     z-index: 10;
     background-color: rgb(255, 255, 255);
-    margin-left: -18px;
+
     padding-top: 5px;
     padding-bottom: 20px;
     width: 100vw;
@@ -759,7 +754,6 @@ footer {
     margin-left: -20px;
     font-weight: bold;
     padding-right: 0px;
-    
   }
 
   .box_menu h2 {
@@ -770,8 +764,6 @@ footer {
   .texte_menu_2 {
     width: 80%;
   }
-
-  
 
   .ligne_box_menu {
     border-bottom: 2px solid #99e2d0;
@@ -836,7 +828,7 @@ footer {
     width: 100vw;
     box-sizing: border-box;
     color: white;
-    margin-left: -18px;
+
     text-align: inherit;
   }
 
